@@ -7,7 +7,7 @@
 <img src="https://github.com/Keannh/ReflectionTokens/blob/main/Images/WithReflectionToken.png?raw=true" alt="drawing" width="600"/>
 
 # Abstract
-
+Instead of training 
 
 
 # Motivation
