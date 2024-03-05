@@ -1,5 +1,11 @@
 # Self Referential Tokens
 
+## Standard Training
+<img src="https://github.com/Keannh/ReflectionTokens/blob/main/Images/StandardGPT.png?raw=true" alt="drawing" width="400"/>
+
+## Training with Reflection Tokens
+<img src="https://github.com/Keannh/ReflectionTokens/blob/main/Images/WithReflectionToken.png?raw=true" alt="drawing" width="600"/>
+
 # Abstract
 
 
