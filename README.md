@@ -23,6 +23,13 @@ I think this
 1. wastes gradient information
 2. Introduces a vanishing gradient problem. For the sequence t1 t2 pause pause t3 for instance I suspect that the gradient information that goes directly from t3 to t2 is disproportionally larger than the signal that goes from t3->pause->pause->t2 (out of the same reason that problem exists in RNNs, though I am not 100% about the math). Thus the pause tokens add no meaningful gradient information to the weights.
 
+# Implementation Details
+It might be of value to limit the attention of further tokens to the real tokens and not the \<Reflection\> tokens in order not to increase the computational overhead. I.e. for the input (t1 t2 \<Reflection\> t3 t4) t3 would only attend to t1 and t2 and not to \<Reflection\> . 
+
+# Alternatives
+Instead of introducing a new \<Reflection\> token, one could also just repeat the last token as an input. Thus, a possible input and loss signal might be
+(t1 t2 t2 t3) -> (t2 t3 t3 t4)
+
 # References
 
 @misc{PauseTokens,
