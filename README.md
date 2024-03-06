@@ -25,6 +25,7 @@ I think this
 
 # Implementation Details
 It might be of value to limit the attention of further tokens to the real tokens and not the \<Reflection\> tokens in order not to increase the computational overhead. I.e. for the input (t1 t2 \<Reflection\> t3 t4) t3 would only attend to t1 and t2 and not to \<Reflection\> . 
+With this implementation, one could train with smaller batchsizes while still using the GPU to its fullest capacity.
 
 # Alternatives
 Instead of introducing a new \<Reflection\> token, one could also just repeat the last token as an input. Thus, a possible input and loss signal might be
